@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- App Sandbox -->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+
+	<!-- File access: user-selected files via open/save panels -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+
+	<!-- File access: read-write to files in the user's home directory
+	     (needed for vault containers and temporary decrypted files) -->
+	<key>com.apple.security.temporary-exception.files.home-relative-path.read-write</key>
+	<array>
+		<string>/</string>
+	</array>
+
+	<!-- Keychain access for storing vault encryption keys (Touch ID) -->
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.vault.app</string>
+	</array>
+
+	<!-- Network access for license validation and iCloud sync -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+
+	<!-- Accessibility for global hotkey (panic lock) -->
+	<key>com.apple.security.temporary-exception.apple-events</key>
+	<array>
+		<string>com.apple.finder</string>
+	</array>
+</dict>
+</plist>
