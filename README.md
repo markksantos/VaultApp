@@ -2,6 +2,8 @@
 
 # 🔐 VaultApp
 
+<img src="app-icon.png" width="128" alt="VaultApp icon" />
+
 **Encrypted file vault for macOS with AES-256, Touch ID, and Finder integration**
 
 [![Swift](https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white)](#)
